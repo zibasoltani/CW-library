@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% for book in books %}
+    <a href="{% url 'book-detail' book.id %}">{{ book.title }}</a><br>
+{% endfor %}
+{% endblock content %}
+
+
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>Title</title>#}
+{#</head>#}
+{#<body>#}
+{# {% for book in books %}#}
+{#     <a href="{{ forloop.counter }}/">{{ book.title }}</a><br>#}
+{# {% endfor%}#}
+{##}
+{##}
+{#{% if books %}#}
+{#{% for book in books %}#}
+{#    <a href="{% url 'book-detail' book.id %}">{{ book.title }}</a><br>#}
+{#{% endfor %}#}
+{#    {% elif book  %}#}
+{#    <p>title:{{ book.title }}</p>#}
+{#     <p>author:{{ book.author }}</p>#}
+{#     <p>published in  {{ book.published_date }}</p>#}
+{#    <p> available:{{ book.available }}</p>#}
+{#{% endif %}#}
+{#</body>#}
+{#</html>#}
+{##}

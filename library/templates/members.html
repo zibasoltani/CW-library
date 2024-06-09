@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% for member in members %}
+    <a href="{% url 'members-detail' member.id %}">{{ member.first_name}}</a><br>
+{% endfor %}
+{% endblock content %}
+
+
+
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>Title</title>#}
+{#</head>#}
+{#<body>#}
+{#{% if members %}#}
+{#{% for member in members %}#}
+{#    <a href="{% url 'members-detail' member.id %}">{{ member.first_name}}</a><br>#}
+{#{% endfor %}#}
+{#    {% elif member  %}#}
+{#    <p>first-nam:{{ member.first_name }}</p>#}
+{#     <p>last_name:{{ member.last_name }}</p>#}
+{#     <p>email in  {{ member.email }}</p>#}
+{#    <p> membership_date:{{ member.membership_date }}</p>#}
+{#{% endif %}#}
+{#</body>#}
+{#</html>#}
